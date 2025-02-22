@@ -14,24 +14,24 @@ function App() {
   }, [tasks]);
 
   //se quiser pode chamar uma API para puxar tarefas
-  useEffect(() => {
-    const fetchTasks = async () => {
-      //chamar API
-      const response = await fetch(
-        "https://jsonplaceholder.typicode.com/todos?_limit=10",
-        {
-          method: "GET",
-        }
-      );
-      // PEGAR DADOS QUE ELA RETORNA
-      const data = await response.json();
-
+  //useEffect(() => {
+  //  const fetchTasks = async () => {
+  //    //chamar API
+  //    const response = await fetch(
+  //      "https://jsonplaceholder.typicode.com/todos?_limit=10",
+ //       {
+  //        method: "GET",
+  //      }
+  //    );
+  //    // PEGAR DADOS QUE ELA RETORNA
+  //    const data = await response.json();
+//
       // ARMAZENAR E PERSISTIR ESSES DADOS NO STATE
-      setTasks(data);
-    };
+   //   setTasks(data);
+  //  };
 
     //fetchTasks();
-  }, []);
+ // }, []);
 
   function onTaskClick(taskId) {
     const newTasks = tasks.map((task) => {
